@@ -1,0 +1,61 @@
+header {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.box {
+  width: 100%;
+  height: 500px;
+  transform-origin: bottom right;
+  box-sizing: border-box;
+  position: absolute;
+  visibility: hidden;
+}
+
+.box--front {
+  background-color: #00A99D;
+  top: -350px;
+  right: -50px;
+  transform: rotate(-3deg);
+  animation-name: moveBoxLogo;
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0, 0, 0.4, 1.4);
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveBoxLogo {
+  0% {
+    transform: rotate(90deg);
+    top: -1000px;
+  }
+  100% {
+    transform: rotate(-3deg);
+    top: -350px;
+    visibility: visible;
+  }
+}
+.box--back {
+  background-color: #008C82;
+  top: -350px;
+  right: -100px;
+  transform: rotate(-5deg);
+  visibility: hidden;
+  animation-name: moveBoxLogo2;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0, 0, 0.4, 1.4);
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveBoxLogo2 {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+    visibility: visible;
+  }
+}
